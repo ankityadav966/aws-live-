@@ -3,6 +3,7 @@ import cors from 'cors';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJsDoc from 'swagger-jsdoc';
 import todoRoutes from './routes/todo.routes';
+import productRoutes from './routes/product.routes';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 
 const app: Application = express();
@@ -17,9 +18,9 @@ const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Todo API (MVC Architecture)',
+      title: 'Suryapura Gram E-Commerce & Management API (MVC Architecture)',
       version: '1.0.0',
-      description: 'Production-ready REST API using Layered / MVC Architecture',
+      description: 'Production-ready REST API for Products, E-Commerce, and Inventory using Layered MVC Architecture with SQLite',
     },
     servers: [
       {
@@ -40,6 +41,7 @@ app.get('/api/health', (req, res) => {
 
 // API Routes
 app.use('/api/todos', todoRoutes);
+app.use('/api/products', productRoutes);
 
 // Error & 404 Handlers
 app.use(notFoundHandler);
