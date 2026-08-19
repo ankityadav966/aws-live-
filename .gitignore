@@ -10,8 +10,6 @@ dist/
 .env.*.local
 
 # SQLite database files
-prisma/*.db
-prisma/*.db-journal
 *.db
 *.db-journal
 

@@ -5,8 +5,8 @@ import {
   createTodo,
   updateTodo,
   deleteTodo,
-  toggleTodo
-} from '../controllers/todoController';
+  toggleTodo,
+} from '../controllers/todo.controller';
 
 const router = Router();
 
